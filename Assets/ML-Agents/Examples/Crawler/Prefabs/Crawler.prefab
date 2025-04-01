@@ -3170,9 +3170,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 15a200030875c9546a4f6460d65f1ded, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 764e6ee178230d54792c688f44cea7cc, type: 3}
   m_InferenceDevice: 2
-  m_BehaviorType: 2
+  m_BehaviorType: 0
   m_BehaviorName: Crawler
   TeamId: 0
   m_UseChildSensors: 1
@@ -3228,7 +3228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxJointSpring: 40000
   jointDampen: 5000
-  maxJointForceLimit: 20000
+  maxJointForceLimit: 200000
   bodyPartsList: []
 --- !u!114 &4845971001715176663
 MonoBehaviour:
