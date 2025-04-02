@@ -3170,9 +3170,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 8175317fa9137de46bdb4d4282687321, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 829ece46f8f52b042aea5ec4b70f9b36, type: 3}
   m_InferenceDevice: 2
-  m_BehaviorType: 1
+  m_BehaviorType: 2
   m_BehaviorName: Crawler
   TeamId: 0
   m_UseChildSensors: 1
