@@ -69,7 +69,16 @@ public class CrawlerAgent : Agent
 
     public override void Initialize()
     {
-        SpawnTarget(TargetPrefab, transform.position); //spawn target
+        //SpawnTarget(TargetPrefab, transform.position); //spawn target
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null)
+        {
+            m_Target = playerObj.transform;
+        }
+        else
+        {
+            Debug.LogError("[CrawlerAgent] Could not find object with tag 'PlayerTarget'");
+        }
 
         m_OrientationCube = GetComponentInChildren<OrientationCubeController>();
         m_DirectionIndicator = GetComponentInChildren<DirectionIndicator>();
