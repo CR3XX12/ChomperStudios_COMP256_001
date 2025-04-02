@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_ZombieCrawler/Scenes/Main/CrawlerZombies.unity
+    guid: 35bb2b09c9d0a0049a90cf096f027f2b
+  - enabled: 1
+    path: Assets/_ZombieCrawler/Scenes/Main/DeathScene.unity
+    guid: e148dfe6686eac9428bc92b5a506f9bb
   m_configObjects:
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 01ed1da5fecef2c49963b3567f6cd076,
       type: 2}
