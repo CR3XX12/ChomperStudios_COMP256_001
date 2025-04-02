@@ -29,6 +29,9 @@ public class BulletBehavior : MonoBehaviour
         {
             Debug.Log("[Bullet] Enemy hit! Destroying: " + crawler.name);
             Destroy(crawler.gameObject);
+
+            // Add score
+            ScoreManager.Instance.AddScore(1);
         }
         else
         {
