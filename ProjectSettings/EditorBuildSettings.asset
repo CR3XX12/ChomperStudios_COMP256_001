@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/_ZombieCrawler/Scenes/Main/DeathScene.unity
     guid: e148dfe6686eac9428bc92b5a506f9bb
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1a5a36122a3a37642854e93a4521c049,
+      type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 9b9e04237f8b3ea4aa8c1f32bafdd8b7,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4e1610aa3963e5549994bc32c88ea935,
+      type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 01ed1da5fecef2c49963b3567f6cd076,
       type: 2}
   m_UseUCBPForAssetBundles: 0
