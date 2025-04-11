@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -23,7 +23,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
 #endif
         [SerializeField]
         [HideInInspector]
-        bool m_IsMenuOpen = true;
+        bool m_IsMenuOpen = false;
 
         bool isMenuOpen
         {
@@ -423,6 +423,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
         void Initialize(XRDeviceSimulator simulator)
         {
             m_Simulator = simulator;
+            isMenuOpen = false;
             InitColorTheme();
             Initialize();
             // Start with the headset enabled
