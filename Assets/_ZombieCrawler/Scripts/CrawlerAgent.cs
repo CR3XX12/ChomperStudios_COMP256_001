@@ -161,7 +161,15 @@ public class CrawlerAgent : Agent
         sensor.AddObservation(Quaternion.FromToRotation(body.forward, cubeForward));
 
         //Add pos of target relative to orientation cube
-        sensor.AddObservation(m_OrientationCube.transform.InverseTransformPoint(m_Target.transform.position));
+        if (m_Target != null && m_OrientationCube != null)
+        {
+            sensor.AddObservation(m_OrientationCube.transform.InverseTransformPoint(m_Target.transform.position));
+        }
+        else
+        {
+            sensor.AddObservation(Vector3.zero); // Or some safe fallback
+        }
+
 
         RaycastHit hit;
         float maxRaycastDist = 10;
@@ -208,6 +216,7 @@ public class CrawlerAgent : Agent
 
     void FixedUpdate()
     {
+        if (m_Target == null || m_OrientationCube == null) return;
         UpdateOrientationObjects();
 
         // If enabled the feet will light up green when the foot is grounded.
@@ -247,12 +256,17 @@ public class CrawlerAgent : Agent
     /// </summary>
     void UpdateOrientationObjects()
     {
-        m_OrientationCube.UpdateOrientation(body, m_Target);
-        if (m_DirectionIndicator)
+        if (m_OrientationCube != null && m_Target != null)
+        {
+            m_OrientationCube.UpdateOrientation(body, m_Target);
+        }
+
+        if (m_DirectionIndicator != null && m_OrientationCube != null)
         {
             m_DirectionIndicator.MatchOrientation(m_OrientationCube.transform);
         }
     }
+
 
     /// <summary>
     ///Returns the average velocity of all of the body parts
@@ -269,7 +283,7 @@ public class CrawlerAgent : Agent
         foreach (var item in m_JdController.bodyPartsList)
         {
             numOfRb++;
-            velSum += item.rb.velocity;
+            velSum += item.rb.linearVelocity;
         }
 
         avgVel = velSum / numOfRb;
@@ -296,4 +310,11 @@ public class CrawlerAgent : Agent
     {
         AddReward(1f);
     }
+
+    public void KillAgent()
+    {
+        EndEpisode(); // Triggers reset if in training mode
+        Destroy(gameObject); // Or use pooling
+    }
+
 }

@@ -23,6 +23,6 @@ public class XRGunShoot : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.velocity = shootPoint.forward * bulletSpeed;
+        rb.linearVelocity = shootPoint.forward * bulletSpeed;
     }
 }
