@@ -12,6 +12,8 @@ EditorBuildSettings:
     path: Assets/_ZombieCrawler/Scenes/Main/DeathScene.unity
     guid: e148dfe6686eac9428bc92b5a506f9bb
   m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9e819208f0bd67c4bbdd37874c140d45,
+      type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 01ed1da5fecef2c49963b3567f6cd076,
       type: 2}
   m_UseUCBPForAssetBundles: 0
